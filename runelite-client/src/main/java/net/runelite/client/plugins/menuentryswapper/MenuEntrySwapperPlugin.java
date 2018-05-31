@@ -461,8 +461,11 @@ public class MenuEntrySwapperPlugin extends Plugin
 		{
 			swap("empty", option, target, true);
 		}
-	}
-
++		else if (config.swapSkullSceptreInvoke() && option.equals("weild") && target.contains("skull sceptre"))
++		{
++			swap("invoke", option, target, true);
++		}
+ 	}
 	@Subscribe
 	public void onPostItemComposition(PostItemComposition event)
 	{
